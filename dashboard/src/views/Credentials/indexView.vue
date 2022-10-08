@@ -19,18 +19,29 @@
         Este aqui é a sua chave de api
       </p>
 
+      <ContentLoader
+        v-if="store.Global.isLoading || state.isLoading"
+        class="rounded"
+        width="600px"
+        height="50"
+      />
+
       <div
-        class="flex py-3 pl-5 mt-2 w-1/2 rounded items-center text-gray-800 bg-brand-gray"
+        v-else
+        class="flex py-3 pl-5 mt-2 w-full lg:w-1/2 rounded justify-between items-center text-gray-800 bg-brand-gray"
       >
-        <span>{{ apiKey }}</span>
-        <div class="flex ml-20 mr-1">
+        <span v-if="state.hasError">Erro ao carregar a apiKey</span>
+        <span v-else>{{ apiKey }}</span>
+        <div v-if="!state.hasError" class="flex ml-20 mr-5">
           <Icon
+            @click="handleCopy"
             name="copy"
             :color="brandColors.graydark"
             size="24"
             class="cursor-pointer"
           />
           <Icon
+            @click="handleGenerateApiKey"
             name="loading"
             :color="brandColors.graydark"
             size="24"
@@ -43,10 +54,19 @@
         Coloque o script abaixo no seu site para começar a receber feedbacks
       </p>
 
-      <div 
-      class="py-3 pl-5 pr-20 mt-2 rounded bg-brand-gray w-2/3 overflow-x-scroll"      
+      <ContentLoader
+        v-if="store.Global.isLoading || state.isLoading"
+        class="rounded"
+        width="600px"
+        height="50"
+      />
+
+      <div
+        v-else
+        class="py-3 pl-5 pr-20 mt-2 rounded bg-brand-gray w-full lg:w-2/3 overflow-x-scroll"
       >
-        <pre>&lt;script src="https://patrick-jabba-feedbacker-widget.netlify.app?api_key={{apiKey}}"&gt;&lt;/script&gt;
+        <span v-if="state.hasError">Erro ao carregar o script</span>
+        <pre v-else>&lt;script src="https://patrick-jabba-feedbacker-widget.netlify.app?api_key={{apiKey}}"&gt;&lt;/script&gt;
         </pre>
       </div>
     </div>
@@ -54,30 +74,81 @@
 </template>
 
 <script>
-import useStore from "@/hooks/useStore";
-import HeaderLogged from "../../components/HeaderLogged";
-import palette from "../../../palette";
-import Icon from "../../components/Icon";
+import { computed, reactive, watch } from "vue";
 
-import { computed } from "vue";
+import services from "../../services";
+import { setApiKey } from "@/store/user";
+import useStore from "@/hooks/useStore";
+
+import Icon from "../../components/Icon";
+import HeaderLogged from "../../components/HeaderLogged";
+import ContentLoader from "../../components/ContentLoader";
+
+import palette from "../../../palette";
+import { useToast } from 'vue-toastification';
 
 export default {
   components: {
-    HeaderLogged,
     Icon,
+    HeaderLogged,
+    ContentLoader,
   },
 
   setup() {
-    const store = useStore("User");
-
-    const apiKey = computed(() => {
-      return `${store.currentUser.apiKey}`;
+    const toast = useToast();
+    const store = useStore();
+    const state = reactive({
+      isLoading: false,
+      hasError: false,
     });
 
+    const apiKey = computed(() => {
+      return `${store.User.currentUser.apiKey}`;
+    });
+
+    watch(() => store.Global.isLoading, () => {
+        if (!apiKey.value) {
+          handleError(true);
+        }
+      }
+    );
+
+    function handleError(error) {
+      state.isLoading = false;
+      state.hasError = !!error;
+    }
+
+    async function handleGenerateApiKey() {
+      try {
+        state.isLoading = true;
+        const { data } = await services.users.generateApiKey();
+
+        setApiKey(data.apiKey);
+        state.isLoading = false;
+      } catch (error) {
+        handleError(error);
+      }
+    }
+
+    async function handleCopy() {
+      toast.clear();
+      try {
+        await navigator.clipboard.writeText(apiKey.value)
+        toast.success('Copiado!');
+      }
+      catch(error){
+        handleError(error)
+      }
+    }
+
     return {
+      state,
       store,
       apiKey,
       brandColors: palette.brand,
+      handleGenerateApiKey,
+      handleError,
+      handleCopy
     };
   },
 };

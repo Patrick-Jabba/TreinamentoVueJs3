@@ -69,8 +69,8 @@ import { useToast } from "vue-toastification";
 import useModal from "@/hooks/useModal";
 import services from "@/services";
 import Icon from "@/components/Icon";
-import { validateEmptyLength3 } from "@/utils/validatators";
-import { validateEmptyAndEmail } from "@/utils/validatators";
+import { validateEmptyLength3 } from "@/utils/validators";
+import { validateEmptyAndEmail } from "@/utils/validators";
 
 export default {
   components: {

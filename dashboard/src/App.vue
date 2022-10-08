@@ -21,7 +21,7 @@ export default {
 
     watch(() => route.path, async () => {
       if (route.meta.requiresAuth) {
-        const token = window.localStorage.getItem('token')
+        const token = localStorage.getItem('token')
         if (!token) {
           router.push({ name: 'Home' })
           return
