@@ -46,9 +46,9 @@
         <FeedbackCardLoading v-if="state.isLoading" />
         <FeedbackCard
           v-else
-          v-for="(feedback, index) in feedbacks"
+          v-for="feedback in state.feedbacks"
           :key="feedback.id"
-          :is-opened="index === 0"
+          :isOpened="index === 0"
           :feedback="feedback"
           class="mb-8"
         />
@@ -106,6 +106,7 @@ export default {
         });
 
         state.feedbacks = data.results;
+        console.log('array', state.feedbacks)
         state.pagination = data.pagination;
         state.isLoading = false;
       } catch (error) {
