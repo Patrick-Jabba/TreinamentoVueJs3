@@ -22,7 +22,7 @@
 ### Exportando e colocando os assets do design
 ### Clonando e rodando backend (pré-pronto) do projeto
 
-## Modulo 4: Criando o dashboard 👷 Em andamento
+## Modulo 4: Criando o dashboard ✔️
 ### Configurando nosso projeto e introdução a roteamento no Vue
 ### Criando tela inicial
 ### Criando nosso modal factory
@@ -33,7 +33,7 @@
 ### Criando tela de credenciais
 ### Criando tela de feedbacks
 
-## Modulo 5: Testes pro dashboard
+## Modulo 5: Testes pro dashboard 👷 Em andamento
 ### Fazendo testes unitários de utils
 ### Fazendo testes unitários dos serviços
 ### Fazendo testes unitários da store
