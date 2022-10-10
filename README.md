@@ -1,7 +1,7 @@
 # Treinamento VueJs3  - Curso completo do iniciante ao avançado.  🤓💻
 ## Aprenda a versão 3 do Vue construindo uma aplicação completa
 
-## Tecnologias usadas: <img  alt="Patrick-Docker" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" /><img alt="Patrick-VueJs" src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" />
+## Tecnologias usadas: <img  alt="Patrick-Docker" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" /><img alt="Patrick-VueJs" src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" /><img alt="Patrick-Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"/>
 
 ## Modulo 1: Introdução ✔️
 ### Entendendo e se preparando pra esse curso
