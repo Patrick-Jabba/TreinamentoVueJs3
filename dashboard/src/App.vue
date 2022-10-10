@@ -1,6 +1,6 @@
 <template>
   <ModalFactory />
-  <RouterView />
+  <RouterView/>
 </template>
 
 <script>
