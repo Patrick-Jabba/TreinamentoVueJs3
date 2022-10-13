@@ -36,6 +36,7 @@
     "cypress": "^9.7.0",
     "eslint": "^7.32.0",
     "jest": "^27.0.5",
+    "jest-mock-axios": "^4.7.0-beta",
     "lint-staged": "^11.1.2",
     "postcss": "^8.4.17",
     "tailwindcss": "^3.1.8"
