@@ -69,7 +69,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Criando tela de credenciais
 ### Criando tela de feedbacks
 
-## Modulo 5: Testes pro dashboard 👷 Em andamento
+## Modulo 5: Testes pro dashboard ✔️
 ### Fazendo testes unitários de utils
 ### Fazendo testes unitários dos serviços
 ### Fazendo testes unitários da store
@@ -78,26 +78,26 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Fazendo testes end2end com cypress (Parte 1)
 ### Fazendo testes end2end com cypress (Parte 2)
 
-## Modulo 6: Deploy e Github actions do dashboard
-Deployando nosso backend na vercel
-Criando jobs no github actions para rodar os testes
-Continuous Deployment com o github e netlify
-Criando dockerfile com multi-stage build pra deploy em outras plataformas
-Respondendo dúvidas
+## Modulo 6: Deploy e Github actions do dashboard 👷 Em andamento
+### Deployando nosso backend na vercel
+### Criando jobs no github actions para rodar os testes
+### Continuous Deployment com o github e netlify
+### Criando dockerfile com multi-stage build pra deploy em outras plataformas
+### Respondendo dúvidas
 
 ## Modulo 7: Criando nosso widget
-Configuração e arquitetura do projeto
-Introdução ao Typescript
-Criando nosso Playground
-Configurando nossa store
-Criando botão flutuante que abre o Widget
-Criando o Wizard de troca de estado
-Criando estado de selecionar tipo do feedback do Wizard
-Criando estado de escrever feedback do Wizard
-Criando estado de sucesso do Wizard
-Criando estado de erro do Wizard
-Criando mecânica de popup no site
-Criando camada de serviço e fazendo o request de criação de feedback
+### Configuração e arquitetura do projeto
+### Introdução ao Typescript
+### Criando nosso Playground
+### Configurando nossa store
+### Criando botão flutuante que abre o Widget
+### Criando o Wizard de troca de estado
+### Criando estado de selecionar tipo do feedback do Wizard
+### Criando estado de escrever feedback do Wizard
+### Criando estado de sucesso do Wizard
+### Criando estado de erro do Wizard
+### Criando mecânica de popup no site
+### Criando camada de serviço e fazendo o request de criação de feedback
 
 ## Modulo 8: Testes pro widget
 ### Setup dos testes unitários com os componentes typescript
