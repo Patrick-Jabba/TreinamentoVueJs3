@@ -7,20 +7,21 @@
 <div class="flex">
   <ul class="flex list-none">
     <li
-    @click="() => router.push({name: 'Credentials'})" 
+    @click="() => router.push({name: 'Credentials'})"
     class="px-6 py-2 mr-2 font-bold text-white rounded-full cursor-pointer focus:outline-none"
     >
       Credenciais
     </li>
 
     <li
-    @click="() => router.push({name: 'Feedbacks'})" 
+    @click="() => router.push({name: 'Feedbacks'})"
     class="px-6 py-2 mr-2 font-bold text-white rounded-full cursor-pointer focus:outline-none"
     >
       Feedbacks
     </li>
 
     <li
+    id="logout-button"
     @click="handleLogout"
     class="px-6 py-2 font-bold text-brand-main bg-white rounded-full cursor-pointer focus:outline-none"
     >
@@ -28,7 +29,7 @@
     </li>
   </ul>
 </div>
-</div>  
+</div>
 </template>
 
 <script>
