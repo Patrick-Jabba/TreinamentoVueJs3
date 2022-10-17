@@ -2273,10 +2273,10 @@
   "resolved" "https://registry.npmjs.org/@vue/shared/-/shared-3.2.40.tgz"
   "version" "3.2.40"
 
-"@vue/test-utils@^2.0.0-rc.18":
-  "integrity" "sha512-aifolXjVdsogjaLmDoZ0FU8vN+R67aWmg9OuVeED4w5Ij5GFQLrlhM19uhWe/r5xXUL4fXMk3pX5wW6FJP1NcQ=="
-  "resolved" "https://registry.npmjs.org/@vue/test-utils/-/test-utils-2.0.0-rc.18.tgz"
-  "version" "2.0.0-rc.18"
+"@vue/test-utils@^2.0.0-rc.21":
+  "integrity" "sha512-U4AxAD/tKJ3ajxYew1gkfEotpr96DE/gLXpbl+nPbsNRqGBfQZZA7YhwGoQNDPgon56v+IGZDrYq7pe3GDl9aw=="
+  "resolved" "https://registry.npmjs.org/@vue/test-utils/-/test-utils-2.1.0.tgz"
+  "version" "2.1.0"
 
 "@vue/vue-loader-v15@npm:vue-loader@^15.9.7":
   "integrity" "sha512-VU6tuO8eKajrFeBzMssFUP9SvakEeeSi1BxdTH5o3+1yUyrldp8IERkSdXlMI2t4kxF2sqYUDsQY+WJBxzBmZg=="
