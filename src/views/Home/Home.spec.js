@@ -1,23 +1,18 @@
-import Home from ".";
 import { shallowMount } from "@vue/test-utils";
-import { routes } from "../../router";
+import router from "../../router";
 
-import { createRouter, createWebHistory } from "vue-router";
+import Home from ".";
 
-const router = createRouter({
-  history: createWebHistory("/"),
-  routes,
+const wrapper = shallowMount(Home, {
+  global: {
+    plugins: [router],
+  },
 });
 
 describe("<Home />", () => {
   it("should render home correctly", async () => {
-    router.push("/");
     await router.isReady();
-    const wrapper = shallowMount(Home, {
-      global: {
-        plugins: [router],
-      },
-    });
+    router.push("/");
 
     expect(wrapper.html()).toMatchSnapshot();
   });
