@@ -1,7 +1,7 @@
 # Treinamento VueJs3  - Curso completo do iniciante ao avançado.  🤓💻
 ## Aprenda a versão 3 do Vue construindo uma aplicação completa
 
-## Tecnologias usadas: <img  alt="Patrick-Docker" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" /><img alt="Patrick-VueJs" src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" /><img alt="Patrick-Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"/><img  alt="Patrick-Tailwind" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+## Tecnologias usadas: <img  alt="Patrick-Docker" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" /><img alt="Patrick-VueJs" src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" /><img alt="Patrick-Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"/><img  alt="Patrick-Tailwind" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /><img alt="Patrick-Cypress" src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e" /><img alt="Patrick-Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
 
 # dashboard
 
@@ -78,14 +78,14 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Fazendo testes end2end com cypress (Parte 1)
 ### Fazendo testes end2end com cypress (Parte 2)
 
-## Modulo 6: Deploy e Github actions do dashboard 👷 Em andamento
+## Modulo 6: Deploy e Github actions do dashboard ✔️
 ### Deployando nosso backend na vercel
 ### Criando jobs no github actions para rodar os testes
 ### Continuous Deployment com o github e netlify
 ### Criando dockerfile com multi-stage build pra deploy em outras plataformas
 ### Respondendo dúvidas
 
-## Modulo 7: Criando nosso widget
+## Modulo 7: Criando nosso widget 👷 Em andamento
 ### Configuração e arquitetura do projeto
 ### Introdução ao Typescript
 ### Criando nosso Playground
