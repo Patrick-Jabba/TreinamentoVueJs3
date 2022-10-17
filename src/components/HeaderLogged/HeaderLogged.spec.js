@@ -31,11 +31,21 @@ describe('<HeaderLoggeed/>', () => {
     router.push('/')
 
     const buttonLogout = wrapper.find('#logout-button');
-    expect(buttonLogout.text()).toBe('Igor (sair)')
+    expect(buttonLogout.text()).toBe('...')
   });
 
-  it('should render user name when theres user logged', () => {
+  it('should render user name when theres user logged', async () => {
+    router.push('/');
+    await router.isReady();
+    mockStore.currentUser.name = 'Igor';
+    const wrapper = shallowMount(HeaderLogged, {
+      global: {
+        plugins: [router]
+      }
+    })
 
+    const buttonLogout = wrapper.find('#logout-button');
+    expect(buttonLogout.text()).toBe('Igor (sair)')
 
   })
 
