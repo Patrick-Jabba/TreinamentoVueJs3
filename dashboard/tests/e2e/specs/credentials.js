@@ -8,7 +8,9 @@ describe('Credentials', () => {
     cy.get('#modal-login')
 
     cy.get('#email-field').type('igor@igor.me')
+    cy.wait(2000)
     cy.get('#password-field').type('1234')
+    cy.wait(2000)
     cy.get('#submit-button').click()
 
     cy.wait(2000)

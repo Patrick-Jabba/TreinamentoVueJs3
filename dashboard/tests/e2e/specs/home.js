@@ -8,7 +8,7 @@ describe('Home', () => {
     cy.get('#modal-create-account')
   });
 
-  it('should render create account modal when clikc on header creatte account button', () => {
+  it('should render create account modal when click on header create account button', () => {
     cy.visit(APP_URL);
 
     cy.get('#header-create-account-button').click()
